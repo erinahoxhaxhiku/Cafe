@@ -413,6 +413,7 @@ select {
 .six-part .row .col p {
     font-size: 20px;
     color: rgb(95, 95, 95);
+    margin-top: 50px;
 }
 
 .six-part .row .col img {
