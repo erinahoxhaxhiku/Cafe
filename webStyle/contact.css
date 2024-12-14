@@ -73,10 +73,12 @@ header ul li {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .footer p:hover {
     color: #fff;
     transition: 1s;
-  }
+}
+
 header ul li a {
     text-decoration: none;
     color: whitesmoke;
@@ -139,13 +141,16 @@ header ul li a {
     font-size: 21px;
     color: gray;
 }
-.first-part{
+
+.first-part {
     margin-top: 50px;
 }
+
 .second-part {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .second-part .row {
     display: flex;
     padding: 20px;
@@ -175,6 +180,29 @@ textarea {
 
 .second-part h3 {
     color: chocolate;
+}
+
+
+.submit-btn {
+    margin-left: 450px;
+    width: 15%;
+    padding: 12px;
+    background-color: #d2691e;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.submit-btn:active {
+    background-color: #1e7e34;
 }
 
 @media only screen and (max-width: 734px) {
