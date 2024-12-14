@@ -1,0 +1,305 @@
+body {
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+@font-face {
+  font-family: RobotoCondensed-Bold;
+  src: url(../Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+  font-family: RobotoCondensed-Light;
+  src: url(../Roboto_Condensed/RobotoCondensed-Light.ttf);
+}
+
+h1 {
+  font-family: RobotoCondensed-Bold;
+}
+
+h2 {
+  font-family: RobotoCondensed-Bold;
+}
+
+h4 {
+  font-family: RobotoCondensed-Bold;
+}
+
+h3 {
+  font-family: RobotoCondensed-Bold;
+}
+
+a {
+  font-family: RobotoCondensed-Light;
+}
+
+p {
+  font-family: RobotoCondensed-Light;
+}
+
+.head {
+  background: rgba(0, 0, 0, 0.5) url(../image/bcg-menu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  background-blend-mode: darken;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul li {
+  list-style-type: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:hover {
+  color: chocolate !important;
+  transition: 0.6s;
+}
+
+.third-part {
+  margin-top: 50px;
+}
+
+.third-part .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.third-part .row .col {
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.third-part .row .col img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  margin-right: 25px;
+}
+
+.third-part .row .col p {
+  font-size: 20px;
+  color: black;
+}
+
+.third-part .row .col p {
+  font-size: 20px;
+}
+
+.money {
+  font-size: 32px;
+  position: relative;
+  top: -12px;
+  left: 50%;
+}
+
+.third-part .txt {
+  text-align: center;
+}
+
+.money {
+  color: chocolate;
+}
+.fourth-part {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+.fourth-part .extraText {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer p:hover {
+  color: #fff;
+  transition: 1s;
+}
+.fourth-part .row {
+  display: flex;
+  justify-content: space-around !important;
+  margin-left: 110px;
+  margin-right: 90px;
+}
+
+.fourth-part .row .col p {
+  width: 90%;
+}
+
+.fourth-part .row .col img {
+  width: 304px;
+  height: 202px;
+}
+
+span {
+  color: chocolate;
+  margin-right: 15px;
+}
+
+.fifth-part {
+  margin-bottom: 25px;
+  background-color: rgb(231, 231, 231);
+  height: 60vh;
+  padding: 25px;
+}
+
+.fifth-part .extraNewText {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.fifth-part .extraNewText p {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.fifth-part .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.fifth-part .row .col {
+  margin-right: 10px;
+}
+
+.fifth-part .row .col input,
+select {
+  background-color: whitesmoke;
+  width: 356px;
+  height: 54px;
+  border: none;
+  margin-top: 10px;
+}
+
+.reserved {
+  text-decoration: none;
+  color: black;
+  border: 1px solid chocolate;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-flex;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 10%;
+}
+
+.footer {
+  background-color: black;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer ul li {
+  list-style-type: none;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .row .col {
+  flex-basis: 30%;
+}
+
+.footer h3 {
+  color: chocolate;
+  font-size: 23px;
+}
+
+.footer p {
+  font-size: 21px;
+  color: gray;
+}
+
+@media only screen and (max-width: 734px) {
+  body {
+    overflow-x: hidden !important;
+    margin: 0;
+  }
+
+  header {
+    display: block;
+  }
+
+  header ul {
+    display: block;
+    text-align: center;
+  }
+
+  .head {
+    width: auto;
+  }
+
+  .head h2,
+  ul {
+    margin-top: 0;
+  }
+
+  .head ul {
+    padding-top: 20px;
+  }
+
+  .third-part .row {
+    display: block;
+    width: auto;
+  }
+
+  .fourth-part .row {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .fifth-part .row {
+    display: block;
+    justify-content: center;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .fifth-part {
+    height: 85vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer .row {
+    display: block;
+    text-align: center;
+    justify-content: space-around;
+  }
+}

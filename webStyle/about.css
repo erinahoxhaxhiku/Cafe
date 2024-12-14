@@ -1,0 +1,298 @@
+body {
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+@font-face {
+  font-family: RobotoCondensed-Bold;
+  src: url(../Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+  font-family: RobotoCondensed-Light;
+  src: url(../Roboto_Condensed/RobotoCondensed-Light.ttf);
+}
+
+h1 {
+  font-family: RobotoCondensed-Bold;
+}
+
+h2 {
+  font-family: RobotoCondensed-Bold;
+}
+
+h4 {
+  font-family: RobotoCondensed-Bold;
+}
+
+h3 {
+  font-family: RobotoCondensed-Bold;
+}
+
+a {
+  font-family: RobotoCondensed-Light;
+}
+
+p {
+  font-family: RobotoCondensed-Light;
+}
+
+.head {
+  background: rgba(0, 0, 0, 0.5) url(../image/about\ bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  background-blend-mode: darken;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul li {
+  list-style-type: none;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:hover {
+  color: chocolate !important;
+  transition: 0.6s;
+}
+
+.main-part {
+  margin-top: 50px;
+}
+
+.main-part .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.main-part .row .col {
+  flex-basis: 25% !important;
+}
+
+.main-part .row .col img {
+  width: 280.39px;
+  height: 395.3px;
+  object-fit: cover;
+  margin-left: -70px;
+  -webkit-box-shadow: 9px 11px 24px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 9px 11px 24px -8px rgba(0,0,0,0.75);
+box-shadow: 9px 11px 24px -8px rgba(0,0,0,0.75);
+}
+.third-part{
+  margin-bottom: 50px;
+}
+.main-part .row .col h1 {
+  font-size: 25px;
+}
+
+hr {
+  color: chocolate;
+  height: 4px;
+  width: 40px;
+  background-color: chocolate;
+  border: 0;
+  position: absolute;
+  left: 16.3%;
+}
+
+.txt {
+  position: relative;
+  top: 30%;
+  left: 45%;
+  color: whitesmoke;
+  font-size: 27px;
+}
+
+.main-part .row :last-child {
+  width: 260px;
+}
+
+.extr {
+  margin-top: -70px;
+}
+
+.main-part .row .col h2 {
+  margin-top: 50%;
+}
+
+.fa-quote-left {
+  font-size: 25px;
+  color: chocolate;
+}
+
+.second-part {
+  text-align: center;
+  background-color: #e9ecef;
+  padding: 20px;
+}
+
+.second-part p {
+  width: 556px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.second-part h4 {
+  color: rgb(51, 51, 51);
+}
+
+.description {
+  width: 534px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.footer p:hover {
+  color: #fff;
+  transition: 1s;
+}
+.contactUs {
+  border: 1px solid chocolate;
+  text-decoration: none;
+  padding: 5px 7px;
+  color: black;
+}
+
+.third-part .row {
+  width: 60%;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.third-part .row .col {
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.third-part p {
+  font-size: 21px;
+}
+
+.third-part .row .col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: black;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer ul li {
+  list-style-type: none;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .row .col {
+  flex-basis: 30%;
+}
+
+.footer h3 {
+  color: chocolate;
+  font-size: 23px;
+}
+
+.footer p {
+  font-size: 21px;
+}
+
+.main-part .row .special1 p {
+  color: rgb(74, 74, 74);
+}
+
+.main-part .row .extr p {
+  color: rgb(74, 74, 74);
+}
+
+.footer p {
+  color: gray;
+}
+
+@media only screen and (max-width: 734px) {
+  header {
+    display: block;
+  }
+
+  header ul {
+    display: block;
+    text-align: center;
+  }
+
+  header ul h2 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .txt {
+    display: none;
+  }
+
+  .main-part .row .col h1 {
+    font-size: 25px;
+    margin-left: -70px;
+  }
+
+  .second-part p {
+    width: auto;
+  }
+
+  .third-part .row {
+    width: auto;
+    height: auto;
+    text-align: center;
+    display: block;
+  }
+
+  .footer .row {
+    display: block;
+    text-align: center;
+  }
+}
