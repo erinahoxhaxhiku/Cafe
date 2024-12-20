@@ -5,11 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="home-page.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../webStyle/home.css" />
   <script src="https://kit.fontawesome.com/3c63bc7a17.js" crossorigin="anonymous"></script>
-  <title>About</title>
+  <script src="../javascript/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="app.js"></script>
+  <title>Home-page</title>
 </head>
 
 <body>
@@ -146,10 +148,8 @@
   </div>
   <div class="second-part">
     <div class="container">
-      <p>
-        Enjoy our specialty coffees and award winning doughnuts in a friendly
-        atmosphere.
-      </p>
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
     </div>
   </div>
   <div class="third-part">
@@ -282,7 +282,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <input type="text" id="name" name="name" placeholder="Full Name" />
+        <input type="text" id="username" name="username" placeholder="Full Name" autocomplete="username" />
       </div>
       <div class="col">
         <select name="person" id="person">
@@ -324,8 +324,8 @@
           dolore perspiciatis iste, vel fuga a, libero architecto ratione
           deleniti sequi."
           <!-- <span class="name">-Liam Smith</span> -->
-          <p class="name">-Liam Smith</p>
-          
+        <p class="name">-Liam Smith</p>
+
         </p>
       </div>
       <div class="col">
