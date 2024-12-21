@@ -8,13 +8,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../webStyle/home.css" />
   <script src="https://kit.fontawesome.com/3c63bc7a17.js" crossorigin="anonymous"></script>
-  <script src="../javascript/home.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script src="app.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <title>Home-page</title>
 </head>
 
 <body>
+
+  <!-- <form id="subscribeBtn">
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit" id="subscribeBtn">Subscribe</button>
+  </form> -->
+
+
 
   <div class="head">
     <header>
@@ -40,7 +46,7 @@
           <a href="../html/home-page.html">
             <h1>Touché</h1>
           </a>
-          <!-- <div class="dropDown">
+          <div class="dropDown">
             <div class="row">
               <div class="col">
                 <img src="../image/caffe.jpg" alt="image" />
@@ -63,7 +69,7 @@
                 </p>
               </div>
             </div>
-          </div> -->
+          </div>
         </li>
       </ul>
       <ul>
@@ -349,6 +355,7 @@
       <a class="reserved extraOne" href="#">Reserved Table</a>
     </div>
   </div>
+
   <div class="eight-part">
     <div class="container">
       <div class="row">
@@ -415,7 +422,7 @@
           <input type="email" id="email" name="email" class="nine-input" placeholder="Email Address" />
         </div>
         <div class="col">
-          <a class="subscribe" href="#">SUBSCRIBE</a>
+          <a class="subscribe" id="subscribeBtn" href="#">SUBSCRIBE</a>
         </div>
       </div>
     </div>
@@ -502,6 +509,67 @@
       </div>
     </div>
   </div>
+  <script src="../javascript/home.js"></script>
+  <script src="app.js"></script>
+  <script>
+    window.onload = function () {
+      // Initialize EmailJS with your public key
+      emailjs.init('o1-R-n9W4JAhUbjsP'); // Your EmailJS public key
+
+      // Event listener for Subscribe button
+      document.getElementById('subscribeBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent form submission
+
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value;
+
+        if (email) {
+          // Send email using EmailJS
+          emailjs.send('service_sw9ysan', 'template_ctoy04b', {
+            user_email: email
+          })
+            .then(function (response) {
+              alert('Thank you for subscribing! Your email has been sent.');
+            })
+            .catch(function (error) {
+              console.error('Failed to send email:', error);
+              alert('There was an error sending your email. Please try again.');
+            });
+        } else {
+          alert('Please enter a valid email address.');
+        }
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize EmailJS with your public key
+      emailjs.init('o1-R-n9W4JAhUbjsP'); // Your EmailJS public key
+
+      // Event listener for Subscribe button
+      document.getElementById('subscribeBtn').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent form submission
+
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value;
+
+        if (email) {
+          // Send email using EmailJS
+          emailjs.send('service_sw9ysan', 'template_ctoy04b', {
+            user_email: email
+          })
+            .then(function (response) {
+              alert('Thank you for subscribing! Your email has been sent.');
+            })
+            .catch(function (error) {
+              console.error('Failed to send email:', error);
+              alert('There was an error sending your email. Please try again.');
+            });
+        } else {
+          alert('Please enter a valid email address.');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

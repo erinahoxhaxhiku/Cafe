@@ -109,9 +109,10 @@ span {
     border: 1px solid #9198e5;
     padding: 10px;
 }
-.text a:hover{
+
+.text a:hover {
     text-decoration: none;
-    color:#9198e5 !important;
+    color: #9198e5 !important;
     border: 1px solid whitesmoke;
     padding: 10px;
 }
@@ -264,7 +265,8 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
+    transition: background-image 1s ease-in-out;
+    /* Smooth transition */
 }
 
 /* .container p {
@@ -290,11 +292,13 @@ hr {
 
 
 .second-part {
-    background-image: url(../image/coffeepot.jpg); /* Initial background image */
+    background-image: url(../image/coffeepot.jpg);
+    /* Initial background image */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    transition: background-image 1s ease-in-out; /* Smooth transition */
+    transition: background-image 1s ease-in-out;
+    /* Smooth transition */
 }
 
 .container p {
@@ -316,7 +320,8 @@ hr {
     font-size: 27px;
 }
 
-#prevBtn, #nextBtn {
+#prevBtn,
+#nextBtn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -338,7 +343,8 @@ hr {
     right: 10px;
 }
 
-#prevBtn:hover, #nextBtn:hover {
+#prevBtn:hover,
+#nextBtn:hover {
     background-color: rgba(0, 0, 0, 0.8);
     border: 3px solid #555;
 }
@@ -629,7 +635,7 @@ a:hover {
     color: #6c757d;
 }
 
-.subscribe {
+#subscribeBtn {
     color: #6c757d;
     border: 1px solid chocolate;
     text-decoration: none;
@@ -647,7 +653,7 @@ a:hover {
     width: 240px;
 }
 
-.subscribe {
+#subscribeBtn {
     padding: 10px 15px;
 }
 
