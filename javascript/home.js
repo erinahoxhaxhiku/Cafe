@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
 // Per email
 
 // Initialize EmailJS
 emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-
 // Event listener for Subscribe button
 document.getElementById('subscribeBtn').addEventListener('click', function (e) {
     e.preventDefault(); // Prevent default link behavior
@@ -55,22 +55,22 @@ document.getElementById('subscribeBtn').addEventListener('click', function (e) {
 
     if (email) {
         // Sending email using EmailJS
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        emailjs.send('service_sw9ysan', 'template_ctoy04b', {
             user_email: email,
         })
-        .then(function (response) {
-            alert('Thank you for subscribing! Your email has been sent.');
-        })
-        .catch(function (error) {
-            console.error('Failed to send email:', error);
-            alert('There was an error sending your email. Please try again.');
-        });
+            .then(function (response) {
+                alert('Thank you for subscribing! Your email has been sent.');
+            })
+            .catch(function (error) {
+                console.error('Failed to send email:', error);
+                alert('There was an error sending your email. Please try again.');
+            });
     } else {
         alert('Please enter a valid email address.');
     }
 });
 
-emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace with your Public Key
-emailjs.send('service_sw9ysan', 'template_ctoy04b', {
-    user_email: email, // This is the email entered by the user
-});
+// emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace with your Public Key
+// emailjs.send('service_sw9ysan', 'template_ctoy04b', {
+//     user_email: email, // This is the email entered by the user
+// });
