@@ -115,6 +115,27 @@
       </div>
       <a class="reserved" href="#">
         <h3>Reserve a Table</h3>
+        <body>
+          <div class="container">
+            <h1>Cafe Statistics</h1>
+            <div class="stat">
+              <h2>Daily Sales</h2>
+              <p id="dailySales">$0</p>
+            </div>
+            <div class="stat">
+              <h2>Customers Served</h2>
+              <p id="customersServed">0</p>
+            </div>
+            <div class="stat">
+              <h2>Top-Selling Item</h2>
+              <p id="topSellingItem">None</p>
+            </div>
+            <div class="stat">
+              <h2>Current Inventory</h2>
+              <p id="currentInventory">50</p>
+            </div>
+            <button onclick="updateStats()">Update Stats</button>
+          </div>
       </a>
     </div>
     <div class="map">
@@ -129,27 +150,6 @@
             optio cum dolorem tempora sint consequatur aliquid atque voluptatem
             aliquam voluptates.
           </p>
-          <body>
-            <div class="container">
-              <h1>Cafe Statistics</h1>
-              <div class="stat">
-                <h2>Daily Sales</h2>
-                <p id="dailySales">$0</p>
-              </div>
-              <div class="stat">
-                <h2>Customers Served</h2>
-                <p id="customersServed">0</p>
-              </div>
-              <div class="stat">
-                <h2>Top-Selling Item</h2>
-                <p id="topSellingItem">None</p>
-              </div>
-              <div class="stat">
-                <h2>Current Inventory</h2>
-                <p id="currentInventory">50</p>
-              </div>
-              <button onclick="updateStats()">Update Stats</button>
-            </div>
         </div>
         <div class="col">
           <h3>Contact Info</h3>
