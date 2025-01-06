@@ -9,22 +9,12 @@
   <link rel="stylesheet" href="../webStyle/home.css" />
   <script src="https://kit.fontawesome.com/3c63bc7a17.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<<<<<<< Updated upstream
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-=======
   <script src="app.js"></script>
->>>>>>> Stashed changes
   <title>Home-page</title>
 </head>
 
 <body>
-
-  <!-- <form id="subscribeBtn">
-    <input type="email" id="email" placeholder="Enter your email" required />
-    <button type="submit" id="subscribeBtn">Subscribe</button>
-  </form> -->
-
-
 
   <div class="head">
     <header>
@@ -322,28 +312,50 @@
     <a class="reserved" href="#">
       <h3>Reserve a Table</h3>
     </a>
-    <br><br>
   </div>
-  <br>
+
+
   <div class="six-part">
     <h2>What clients say about us</h2>
-    <div class="row">
-      <div class="col">
-        <p>
-          " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
-          veritatis vitae modi ex quis quibusdam error repudiandae adipisci
-          dolore perspiciatis iste, vel fuga a, libero architecto ratione
-          deleniti sequi."
-          <!-- <span class="name">-Liam Smith</span> -->
-        <p class="name">-Liam Smith</p>
-
-        </p>
+    <div class="testimonial-container">
+      <div class="row active">
+        <div class="col">
+          <br><br>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
+            veritatis vitae modi ex quis quibusdam error repudiandae adipisci
+            dolore perspiciatis iste, vel fuga a, libero architecto ratione
+            deleniti sequi."
+          </p>
+          <p class="name">-Liam Smith</p>
+        </div>
+        <div class="col">
+          <img src="../image/avatar men.webp" alt="Client Image" />
+        </div>
       </div>
-      <div class="col">
-        <img src="../image/avatar men.webp" alt="" />
+      <div class="row">
+        <div class="col">
+          <br><br>
+          <p>
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam
+            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+            consequatur?"
+          </p>
+          <p class="name">-Emma Johnson</p>
+        </div>
+        <div class="col">
+          <img src="../image/avatar girls.webp" alt="Client Image" />
+        </div>
       </div>
     </div>
+    <div class="controls">
+      <button id="prevBtn">❮</button>
+      <button id="nextBtn">❯</button>
+    </div>
   </div>
+
+
+
 
   <div class="seven-part">
     <h1>Upcoming Events</h1>
@@ -389,7 +401,7 @@
         </p>
       </div>
       <div class="row2">
-        <a class="reserved extraOne date" href="#">Reserved Table</a>
+        <a class="reserved1 extraOne date" href="#">Reserved Table</a>
       </div>
     </div>
   </div>
@@ -416,7 +428,7 @@
         </p>
       </div>
       <div class="row2">
-        <a class="reserved extraOne date" href="#">Reserved Table</a>
+        <a class="reserved1 extraOne date" href="#">Reserved Table</a>
       </div>
     </div>
   </div>
