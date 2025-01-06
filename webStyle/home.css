@@ -452,7 +452,7 @@ hr {
 }
 
 .box:hover {
-    transform: scale(1.05);
+    transform: scale(-1.01);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
@@ -485,7 +485,7 @@ p {
     background: rgba(255, 165, 0, 0.8);
     border-radius: 5px;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 .box .extraOne:hover {
@@ -497,7 +497,7 @@ p {
     border: 2px solid chocolate;
 }
 
-.extraOne{
+.extraOne {
     width: 100px;
     margin: 20px auto;
     text-align: center;
@@ -516,11 +516,34 @@ p {
     display: inline-flex;
     position: relative;
     left: 40%;
-    transform: translate(-70%, 20%);
+    transform: translate(-70%, -90%);
     top: 10%;
     margin-top: 26px;
     margin-left: 160px;
     text-align: center;
+}
+
+
+
+
+.reserved1 {
+    text-decoration: none;
+    color: black;
+    border: 1px solid chocolate;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    left: 40%;
+    transform: translate(-70%, -90%);
+    top: 10%;
+    margin-top: 26px;
+    margin-left: 160px;
+    text-align: center;
+}
+
+.reserved1:hover {
+    font-weight: 800;
+    /* transition-duration: 1s; */
 }
 
 
@@ -605,43 +628,161 @@ select {
     border: none;
     margin-top: 10px;
 }
+
 .six-part {
     text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.six-part h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 60px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+}
+
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .six-part .row {
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
-    margin-bottom: 50px;
     padding: 20px;
-    box-shadow: -46px -39px 60px -10px rgba(190, 202, 202, 0.75);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgb(231, 231, 231);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+}
+
+.six-part .row.active {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .six-part .row .col {
-    width: 50%;
+    width: 45%;
 }
 
 .six-part .row .col p {
-    font-size: 20px;
-    color: rgb(95, 95, 95);
-    margin-top: 50px;
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
 }
 
 .six-part .row .col img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .six-part .row .col p .name {
-    position: relative;
-    left: -180px;
-    top: 50px;
-    font-size: 21px;
+    font-size: 18px;
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+    text-align: right;
 }
+
+
+.six-part .row .col img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.row {
+    opacity: 0;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.row.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+
+/* .six-part .row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .six-part .row.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .six-part .row .col {
+    width: 45%;
+  }
+  
+  .six-part .row .col p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  .six-part .row .col img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .six-part .row .col p .name {
+    font-size: 18px;
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .controls button:hover {
+    background-color: #333;
+  }
+   */
 
 .location .row .col i {
     color: #f3f3f3;

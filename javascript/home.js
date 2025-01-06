@@ -40,10 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('JavaScript is running!');
 });
 
+// Perfoto2
 
-<<<<<<< Updated upstream
-=======
-// perfoto2
 
 function toggleDetails(boxElement) {
     const details = boxElement.querySelector('.details');
@@ -54,14 +52,95 @@ function toggleDetails(boxElement) {
     }
 }
 
-// Dropdown
 
->>>>>>> Stashed changes
+// per klient qiik dhe djale
+
+const testimonials = document.querySelectorAll('.six-part .row');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+let autoSlideInterval;
+
+// Function to show the current testimonial
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+        testimonial.classList.remove('active');
+        if (i === index) {
+            testimonial.classList.add('active');
+        }
+    });
+}
+
+// Function to move to the next testimonial
+function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
+}
+
+// Function to move to the previous testimonial
+function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentIndex);
+}
+
+// Restart auto-slide
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}
+
+// Event listeners for buttons
+nextBtn.addEventListener('click', () => {
+    nextTestimonial();
+    resetAutoSlide();
+});
+
+prevBtn.addEventListener('click', () => {
+    prevTestimonial();
+    resetAutoSlide();
+});
+
+// Auto-slide functionality
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextTestimonial, 5000);
+}
+
+// Initial setup
+showTestimonial(currentIndex);
+startAutoSlide();
+
+
+// JavaScript for sliding testimonials
+// const testimonials = document.querySelectorAll('.six-part .row');
+// let currentIndex = 0;
+
+// // Function to show the next testimonial
+// function showNextTestimonial() {
+//     testimonials.forEach((testimonial, index) => {
+//         testimonial.classList.remove('active');
+//         if (index === currentIndex) {
+//             testimonial.classList.add('active');
+//         }
+//     });
+
+//     // Update index
+//     currentIndex = (currentIndex + 1) % testimonials.length;
+// }
+
+// // Initial display
+// showNextTestimonial();
+
+// // Rotate testimonials every 5 seconds
+// setInterval(showNextTestimonial, 5000);
+
+
+
 
 // Per email
 
 // Initialize EmailJS
 emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+
 // Event listener for Subscribe button
 document.getElementById('subscribeBtn').addEventListener('click', function (e) {
     e.preventDefault(); // Prevent default link behavior
@@ -71,7 +150,7 @@ document.getElementById('subscribeBtn').addEventListener('click', function (e) {
 
     if (email) {
         // Sending email using EmailJS
-        emailjs.send('service_sw9ysan', 'template_ctoy04b', {
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
             user_email: email,
         })
             .then(function (response) {
@@ -86,7 +165,7 @@ document.getElementById('subscribeBtn').addEventListener('click', function (e) {
     }
 });
 
-// emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace with your Public Key
-// emailjs.send('service_sw9ysan', 'template_ctoy04b', {
-//     user_email: email, // This is the email entered by the user
-// });
+emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace with your Public Key
+emailjs.send('service_sw9ysan', 'template_ctoy04b', {
+    user_email: email, // This is the email entered by the user
+});
