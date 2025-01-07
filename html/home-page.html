@@ -9,11 +9,8 @@
   <link rel="stylesheet" href="../webStyle/home.css" />
   <script src="https://kit.fontawesome.com/3c63bc7a17.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<<<<<<< Updated upstream
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-=======
   <script src="app.js"></script>
->>>>>>> Stashed changes
   <title>Home-page</title>
 </head>
 
@@ -325,32 +322,48 @@
     <br><br>
   </div>
   <br>
+
+
   <div class="six-part">
     <h2>What clients say about us</h2>
-    <div class="row">
-      <div class="col">
-        <p>
-          " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
-          veritatis vitae modi ex quis quibusdam error repudiandae adipisci
-          dolore perspiciatis iste, vel fuga a, libero architecto ratione
-          deleniti sequi."
-          <!-- <span class="name">-Liam Smith</span> -->
-        <p class="name">-Liam Smith</p>
-
-        </p>
+    <div class="testimonial-container">
+      <div class="testimonial-slide active">
+        <div class="testimonial-content">
+          <br><br>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
+            veritatis vitae modi ex quis quibusdam error repudiandae adipisci
+            dolore perspiciatis iste, vel fuga a, libero architecto ratione
+            deleniti sequi."
+          </p>
+          <p class="name">-Liam Smith</p>
+        </div>
+        <div class="testimonial-image">
+          <img src="../image/avatar men.webp" alt="Client Image" />
+        </div>
       </div>
-      <div class="col">
-        <img src="../image/avatar men.webp" alt="" />
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
+          <br><br>
+          <p>
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
+          </p>
+          <p class="name">-Emma Johnson</p>
+        </div>
+        <div class="testimonial-image">
+          <img src="../image/avatar girls.webp" alt="Client Image" />
+        </div>
       </div>
     </div>
-<<<<<<< Updated upstream
-=======
     <div class="controls">
-      <button id="prevBtnn">❮</button>
-      <button id="nextBtnn">❯</button>
+      <button class="prevbtnn">❮</button>
+      <button class="nextbtnn">❯</button>
     </div>
->>>>>>> Stashed changes
   </div>
+
+
+
 
   <div class="seven-part">
     <h1>Upcoming Events</h1>
@@ -396,7 +409,7 @@
         </p>
       </div>
       <div class="row2">
-        <a class="reserved extraOne date" href="#">Reserved Table</a>
+        <a class="reserved1 extraOne date" href="#">Reserved Table</a>
       </div>
     </div>
   </div>
@@ -423,7 +436,7 @@
         </p>
       </div>
       <div class="row2">
-        <a class="reserved extraOne date" href="#">Reserved Table</a>
+        <a class="reserved1 extraOne date" href="#">Reserved Table</a>
       </div>
     </div>
   </div>
@@ -444,43 +457,33 @@
       </div>
     </div>
   </div>
+
+
   <div class="final-part">
     <h2>Our gallery</h2>
-    <div class="row">
-      <div class="col">
-        <img class="end1" src="../image/end-1.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end4" src="../image/end-4.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end6" src="../image/end-6.jpg" alt="" />
-      </div>
+    <div class="gallery">
+      <img class="end1" src="../image/end-1.jpg" alt="Gallery Image 1" />
+      <img class="end4" src="../image/end-4.jpg" alt="Gallery Image 2" />
+      <img class="end6" src="../image/end-6.jpg" alt="Gallery Image 3" />
+      <img class="end2" src="../image/end-2.jpg" alt="Gallery Image 4" />
+      <img class="end5" src="../image/end-5.jpg" alt="Gallery Image 5" />
+      <img class="end7" src="../image/end-7.jpg" alt="Gallery Image 6" />
+      <img class="end3" src="../image/end-3.jpg" alt="Gallery Image 7" />
+      <img class="end8" src="../image/end-8.jpg" alt="Gallery Image 8" />
     </div>
-    <div class="row">
-      <div class="col">
-        <img class="end2" src="../image/end-2.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end5" src="../image/end-5.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end7" src="../image/end-7.jpg" alt="" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <img class="end3" src="../image/end-3.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end8" src="../image/end-8.jpg" alt="" />
-      </div>
+    <div id="lightbox" class="lightbox hidden">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" src="" alt="Expanded Image" />
     </div>
   </div>
+
+
   <div class="map">
     <img src="../image/pristina_map.png" alt="" />
   </div>
   <div class="footer">
+    <button id="toggleFooter">Toggle Footer Info</button>
+    <button id="toggleDarkMode">Dark Mode</button>
     <div class="row">
       <div class="col">
         <h3>About us</h3>
