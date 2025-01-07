@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('JavaScript is running!');
 });
 
-// Perfoto2
-
+// perfoto2
 
 function toggleDetails(boxElement) {
     const details = boxElement.querySelector('.details');
@@ -52,12 +51,14 @@ function toggleDetails(boxElement) {
     }
 }
 
+// Dropdown
+
 
 // per klient qiik dhe djale
 
-const testimonials = document.querySelectorAll('.six-part .row');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+const testimonials = document.querySelectorAll('.testimonial-slide');
+const prevBtn = document.querySelector('.prevbtnn');
+const nextBtn = document.querySelector('.nextbtnn');
 let currentIndex = 0;
 let autoSlideInterval;
 
@@ -110,6 +111,10 @@ showTestimonial(currentIndex);
 startAutoSlide();
 
 
+
+
+
+
 // JavaScript for sliding testimonials
 // const testimonials = document.querySelectorAll('.six-part .row');
 // let currentIndex = 0;
@@ -136,11 +141,143 @@ startAutoSlide();
 
 
 
+
+
+
+
+// Gallery
+
+
+// Select all gallery images and lightbox elements
+const galleryImages = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox .close');
+
+// Function to open the lightbox
+function openLightbox(event) {
+    lightbox.classList.remove('hidden');
+    lightboxImg.src = event.target.src;
+}
+
+// Function to close the lightbox
+function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightboxImg.src = '';
+}
+
+// Add click event listeners to each gallery image
+galleryImages.forEach((img) => {
+    img.addEventListener('click', openLightbox);
+});
+
+// Add click event listener to the close button
+closeBtn.addEventListener('click', closeLightbox);
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+
+
+
+
+
+// Map
+
+
+const mapImage = document.querySelector('.map img');
+
+// Show tooltip on hover
+mapImage.addEventListener('mouseover', () => {
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('map-tooltip');
+    tooltip.textContent = "Welcome to Pristina!";
+    document.body.appendChild(tooltip);
+
+    mapImage.addEventListener('mousemove', (e) => {
+        tooltip.style.left = `${e.pageX + 10}px`;
+        tooltip.style.top = `${e.pageY + 10}px`;
+    });
+
+    mapImage.addEventListener('mouseout', () => {
+        tooltip.remove();
+    });
+});
+
+
+
+// Footer
+
+
+const footer = document.querySelector('.footer');
+const toggleFooterButton = document.getElementById('toggleFooter');
+
+toggleFooterButton.addEventListener('click', () => {
+    footer.classList.toggle('hidden');
+});
+
+// Hightlight footer
+
+const footerCols = document.querySelectorAll('.footer .col');
+
+footerCols.forEach((col) => {
+    col.addEventListener('mouseover', () => {
+        col.style.backgroundColor = 'rgba(255, 140, 0, 0.2)';
+    });
+
+    col.addEventListener('mouseout', () => {
+        col.style.backgroundColor = 'transparent';
+    });
+});
+
+
+
+const openingHours = document.querySelector('.footer .col:nth-child(3) p:last-child');
+const targetHour = 20; // 8 PM
+
+function updateCountdown() {
+    const now = new Date();
+    let hours = targetHour - now.getHours();
+    let minutes = 59 - now.getMinutes();
+    let seconds = 59 - now.getSeconds();
+
+    if (hours < 0) hours += 24;
+
+    openingHours.textContent = `Opening in: ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateCountdown, 1000);
+
+
+
+
+const copyButtons = document.querySelectorAll('.copy-btn');
+
+copyButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const info = button.getAttribute('data-info');
+        navigator.clipboard.writeText(info).then(() => {
+            alert('Copied to clipboard!');
+        });
+    });
+});
+
+
+const toggleDarkMode = document.getElementById('toggleDarkMode');
+
+toggleDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+
 // Per email
 
 // Initialize EmailJS
 emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-
 // Event listener for Subscribe button
 document.getElementById('subscribeBtn').addEventListener('click', function (e) {
     e.preventDefault(); // Prevent default link behavior
@@ -150,7 +287,7 @@ document.getElementById('subscribeBtn').addEventListener('click', function (e) {
 
     if (email) {
         // Sending email using EmailJS
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        emailjs.send('service_sw9ysan', 'template_ctoy04b', {
             user_email: email,
         })
             .then(function (response) {
@@ -165,7 +302,7 @@ document.getElementById('subscribeBtn').addEventListener('click', function (e) {
     }
 });
 
-emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace with your Public Key
-emailjs.send('service_sw9ysan', 'template_ctoy04b', {
-    user_email: email, // This is the email entered by the user
-});
+// emailjs.init('o1-R-n9W4JAhUbjsP'); // Replace with your Public Key
+// emailjs.send('service_sw9ysan', 'template_ctoy04b', {
+//     user_email: email, // This is the email entered by the user
+// });

@@ -16,6 +16,13 @@
 
 <body>
 
+  <!-- <form id="subscribeBtn">
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit" id="subscribeBtn">Subscribe</button>
+  </form> -->
+
+
+
   <div class="head">
     <header>
       <ul>
@@ -117,7 +124,7 @@
       <div class="col">
         <img src="../image/2.jpg" alt="" />
       </div>
-      <div class="col extr">
+      <div class="col extra">
         <h2>Always amazing experience</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
@@ -312,14 +319,16 @@
     <a class="reserved" href="#">
       <h3>Reserve a Table</h3>
     </a>
+    <br><br>
   </div>
+  <br>
 
 
   <div class="six-part">
     <h2>What clients say about us</h2>
     <div class="testimonial-container">
-      <div class="row active">
-        <div class="col">
+      <div class="testimonial-slide active">
+        <div class="testimonial-content">
           <br><br>
           <p>
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
@@ -329,28 +338,27 @@
           </p>
           <p class="name">-Liam Smith</p>
         </div>
-        <div class="col">
+        <div class="testimonial-image">
           <img src="../image/avatar men.webp" alt="Client Image" />
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="testimonial-slide">
+        <div class="testimonial-content">
           <br><br>
           <p>
-            "Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-            consequatur?"
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
           </p>
           <p class="name">-Emma Johnson</p>
         </div>
-        <div class="col">
+        <div class="testimonial-image">
           <img src="../image/avatar girls.webp" alt="Client Image" />
         </div>
       </div>
     </div>
     <div class="controls">
-      <button id="prevBtn">❮</button>
-      <button id="nextBtn">❯</button>
+      <button class="prevbtnn">❮</button>
+      <button class="nextbtnn">❯</button>
     </div>
   </div>
 
@@ -449,43 +457,33 @@
       </div>
     </div>
   </div>
+
+
   <div class="final-part">
     <h2>Our gallery</h2>
-    <div class="row">
-      <div class="col">
-        <img class="end1" src="../image/end-1.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end4" src="../image/end-4.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end6" src="../image/end-6.jpg" alt="" />
-      </div>
+    <div class="gallery">
+      <img class="end1" src="../image/end-1.jpg" alt="Gallery Image 1" />
+      <img class="end4" src="../image/end-4.jpg" alt="Gallery Image 2" />
+      <img class="end6" src="../image/end-6.jpg" alt="Gallery Image 3" />
+      <img class="end2" src="../image/end-2.jpg" alt="Gallery Image 4" />
+      <img class="end5" src="../image/end-5.jpg" alt="Gallery Image 5" />
+      <img class="end7" src="../image/end-7.jpg" alt="Gallery Image 6" />
+      <img class="end3" src="../image/end-3.jpg" alt="Gallery Image 7" />
+      <img class="end8" src="../image/end-8.jpg" alt="Gallery Image 8" />
     </div>
-    <div class="row">
-      <div class="col">
-        <img class="end2" src="../image/end-2.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end5" src="../image/end-5.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end7" src="../image/end-7.jpg" alt="" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <img class="end3" src="../image/end-3.jpg" alt="" />
-      </div>
-      <div class="col">
-        <img class="end8" src="../image/end-8.jpg" alt="" />
-      </div>
+    <div id="lightbox" class="lightbox hidden">
+      <span class="close">&times;</span>
+      <img id="lightbox-img" src="" alt="Expanded Image" />
     </div>
   </div>
+
+
   <div class="map">
     <img src="../image/pristina_map.png" alt="" />
   </div>
   <div class="footer">
+    <button id="toggleFooter">Toggle Footer Info</button>
+    <button id="toggleDarkMode">Dark Mode</button>
     <div class="row">
       <div class="col">
         <h3>About us</h3>
