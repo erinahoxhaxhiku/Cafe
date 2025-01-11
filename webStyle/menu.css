@@ -104,7 +104,14 @@ a:hover {
   height: 88px;
   object-fit: cover;
   margin-right: 25px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition effect */
 }
+
+.third-part .row .col img:hover {
+  transform: scale(1.1); /* Scale up the image */
+  filter: brightness(0.8); /* Darken the image */
+}
+
 
 .third-part .row .col p {
   font-size: 20px;
@@ -303,3 +310,15 @@ select {
     justify-content: space-around;
   }
 }
+
+.third-part .row .col.hidden {
+  opacity: 0 !important;
+  transform: translateY(50px) !important;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out !important;
+}
+
+.third-part .row .col.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
