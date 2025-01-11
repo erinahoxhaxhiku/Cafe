@@ -74,10 +74,12 @@ header ul li {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .footer p:hover {
     color: #fff;
     transition: 1s;
-  }
+}
+
 header ul li a {
     text-decoration: none;
     color: whitesmoke;
@@ -257,9 +259,67 @@ header ul li a {
     font-size: 21px;
     color: gray;
 }
-.final-part{
+
+.final-part {
     margin-bottom: 100px;
 }
+
+/* Lightbox Modal Styles */
+.modal {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1100;
+}
+
+.close-modal:hover {
+    color: #d2691e;
+}
+
+/* Image hover effect */
+.final-part .row .col img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.final-part .row .col img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover effect */
+.subscribe:hover {
+    background-color: #d2691e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
 
 @media only screen and (max-width: 734px) {
     body {
