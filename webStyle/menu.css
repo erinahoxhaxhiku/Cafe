@@ -10,6 +10,7 @@ ul {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -157,12 +158,29 @@ a:hover {
 .fourth-part .row .col img {
   width: 304px;
   height: 202px;
+  position: relative;
+}
+
+h3[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
+  top: 100%;  
+  left: 0;
+  transform: translateY(10px); 
 }
 
 span {
   color: chocolate;
   margin-right: 15px;
 }
+
 
 .fifth-part {
   margin-bottom: 25px;
@@ -303,3 +321,17 @@ select {
     justify-content: space-around;
   }
 }
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards; 
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
