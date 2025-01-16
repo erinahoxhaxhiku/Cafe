@@ -13,113 +13,136 @@
       src="https://kit.fontawesome.com/3c63bc7a17.js"
       crossorigin="anonymous"
     ></script>
-    <title>About</title>
+    <title>Reservation</title>
   </head>
 
   <body>
     <div class="head">
       <header>
         <ul>
-          <li>
-            <a href="../html/about.html">
-              <h2>About Us</h2>
-            </a>
-          </li>
-          <li>
-            <a href="../html/menu.html">
-              <h2>Menu</h2>
-            </a>
-          </li>
-          <li>
-            <a href="../html/reservation.html">
-              <h2>Reservation</h2>
-            </a>
-          </li>
+          <li><a href="../html/about.html"><h2>About Us</h2></a></li>
+          <li><a href="../html/menu.html"><h2>Menu</h2></a></li>
+          <li><a href="../html/reservation.html"><h2>Reservation</h2></a></li>
         </ul>
         <ul>
-          <li>
-            <a href="../html/home-page.html">
-              <h1>Touché</h1>
-            </a>
-          </li>
+          <li><a href="../html/home-page.html"><h1>Touché</h1></a></li>
         </ul>
         <ul>
-          <li>
-            <a href="../html/events.html">
-              <h2>News Events</h2>
-            </a>
-          </li>
-          <li>
-            <a href="../html/gallery.html">
-              <h2>Gallery</h2>
-            </a>
-          </li>
-          <li>
-            <a href="../html/contact.html">
-              <h2>Contact</h2>
-            </a>
-          </li>
+          <li><a href="../html/events.html"><h2>News Events</h2></a></li>
+          <li><a href="../html/gallery.html"><h2>Gallery</h2></a></li>
+          <li><a href="../html/contact.html"><h2>Contact</h2></a></li>
         </ul>
       </header>
       <div class="text">
         <h1>Reservation</h1>
       </div>
     </div>
-    <div class="fifth-part">
-      <div class="extraNewText">
-        <h2>Make online reservation</h2>
-        <p class="specialColor">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
-          illo praesentium sequi in cum, beatae maiores quae qui.
-        </p>
+    <!-- Add this HTML for the modal -->
+<div id="confirmationModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Reservation was successful!</p>
+  </div>
+</div>
+
+<style>
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  font-weight: bold;
+}
+
+.modal-content {
+  background-color: #69ab50;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #72c576;
+  width: 80%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function validateForm(event) {
+  event.preventDefault(); // Prevent the default form submission
+  document.getElementById("confirmationModal").style.display = "block"; // Show the modal
+}
+
+function closeModal() {
+  document.getElementById("confirmationModal").style.display = "none"; // Hide the modal
+}
+</script>
+
+    <form id="reservationForm" onsubmit="validateForm(event)">
+      <div class="fifth-part">
+        <div class="extraNewText">
+          <h2>Make online reservation</h2>
+          <p class="specialColor">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+            illo praesentium sequi in cum, beatae maiores quae qui.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" id="name" name="name" placeholder="Full Name" required />
+          </div>
+          <div class="col">
+            <select name="person" id="person" required>
+              <option value="1">1 Person</option>
+              <option value="2">2 Persons</option>
+              <option value="3">3 Persons</option>
+              <option value="4">4 Persons</option>
+              <option value="5">5 Persons</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" required />
+          </div>
+          <div class="col">
+            <input type="date" name="date" id="date" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="email" id="email" name="email" placeholder="Email Address" required />
+          </div>
+          <div class="col">
+            <input type="time" name="time" id="time" required />
+          </div>
+        </div>
+        <button type="submit" class="reserved">
+          <h3>Reserve a Table</h3>
+        </button>
       </div>
-      <div class="row">
-        <div class="col">
-          <input type="text" id="name" name="name" placeholder="Full Name" />
-        </div>
-        <div class="col">
-          <select name="person" id="person">
-            <option value="1">1 Person</option>
-            <option value="2">2 Persons</option>
-            <option value="3">3 Persons</option>
-            <option value="4">4 Persons</option>
-            <option value="5">5 Persons</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <input
-            type="number"
-            id="phonenumber"
-            name="phonenumber"
-            placeholder="Phone Number"
-          />
-        </div>
-        <div class="col">
-          <input type="date" name="date" id="date" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-          />
-        </div>
-        <div class="col">
-          <input type="time" name="time" id="time" />
-        </div>
-      </div>
-      <a class="reserved" href="#">
-        <h3>Reserve a Table</h3>
-      </a>
-    </div>
+    </form>
+
     <div class="map">
       <img src="../image/pristina_map.png" alt="" />
     </div>
+
     <div class="footer">
       <div class="row">
         <div class="col">
@@ -155,7 +178,6 @@
                   <i class="fa-solid fa-envelope"></i>
                 </span>
                 erinahoxhaxhiku24@gmail.com
-
               </p>
             </li>
           </ul>
@@ -168,4 +190,5 @@
       </div>
     </div>
   </body>
+  <script src="js/reservation.js"></script>
 </html>
