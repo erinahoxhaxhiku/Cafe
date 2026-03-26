@@ -46,11 +46,11 @@
 
       <div class="col">
         <h3>Write to me:</h3>
-        <p>erinahoxhaxhiku24@gmail.com</p>
+        <p>gretagercari@gmail.com</p>
         <h3>Call me</h3>
         <p>045-498-382</p>
         <h3>Visit us</h3>
-        <p>Vushtrri, Kosova</p>
+        <p>Prishtine, Kosova</p>
       </div>
     </div>
   </div>

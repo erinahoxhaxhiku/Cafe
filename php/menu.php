@@ -169,9 +169,9 @@
       <div class="col">
         <h3>Contact Info</h3>
         <ul>
-          <li><p><span><i class="fa-solid fa-location-dot"></i></span> Vushtrri, Kosovo</p></li>
+          <li><p><span><i class="fa-solid fa-location-dot"></i></span> Prishtine, Kosovo</p></li>
           <li><p><span><i class="fa-solid fa-phone"></i></span> +383-45-498-382</p></li>
-          <li><p><span><i class="fa-solid fa-envelope"></i></span> erinahoxhaxhiku24@gmail.com</p></li>
+          <li><p><span><i class="fa-solid fa-envelope"></i></span> gretagercari@gmail.com</p></li>
         </ul>
       </div>
       <div class="col">
